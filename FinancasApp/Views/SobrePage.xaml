@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FinancasApp.Views.SobrePage" Title="Sobre">
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Label Text="ℹ️ Sobre o app" Style="{StaticResource TituloSecao}" />
+        <Border Style="{StaticResource CardBorder}">
+            <VerticalStackLayout Spacing="6">
+                <Label Text="Minhas Finanças" FontFamily="OpenSansSemibold" />
+                <Label Text="Versão 1.0" FontSize="12" TextColor="{StaticResource Gray500}" />
+                <Label Text="Projeto de atividade em dupla – .NET MAUI." />
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

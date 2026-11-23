@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FinancasApp.Views.ResumoMensalPage" Title="Mensal">
+    <VerticalStackLayout Padding="20" Spacing="14">
+        <Border Style="{StaticResource CardBorder}">
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Novembro / 2026" Style="{StaticResource TituloSecao}" />
+                <Label Text="Comparativo com o mês anterior ficaria aqui." TextColor="{StaticResource Gray500}" />
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

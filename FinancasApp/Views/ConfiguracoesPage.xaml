@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FinancasApp.Views.ConfiguracoesPage" Title="Configurações">
+    <VerticalStackLayout Padding="24" Spacing="16">
+        <Border Style="{StaticResource CardBorder}">
+            <VerticalStackLayout Spacing="12">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="Tema escuro" VerticalOptions="Center" />
+                    <Switch Grid.Column="1" Toggled="OnTemaToggled" />
+                </Grid>
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="Notificações" VerticalOptions="Center" />
+                    <Switch Grid.Column="1" IsToggled="True" />
+                </Grid>
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FinancasApp.Views.DicasPage" Title="Dicas">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+            <Border Style="{StaticResource CardBorder}"><Label Text="Anote todos os gastos, até os pequenos." /></Border>
+            <Border Style="{StaticResource CardBorder}"><Label Text="Separe uma parte da renda assim que ela entrar." /></Border>
+            <Border Style="{StaticResource CardBorder}"><Label Text="Defina metas com valor e prazo." /></Border>
+            <Border Style="{StaticResource CardBorder}"><Label Text="Revise as assinaturas todo mês." /></Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

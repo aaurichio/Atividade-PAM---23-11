@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinancasApp.Views.HomePage"
+             Title="Home">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            
+            <Border Style="{StaticResource CardBorder}" BackgroundColor="{StaticResource Primary}">
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Saldo do mês" TextColor="{StaticResource Secondary}" FontSize="14" />
+                    <Label x:Name="SaldoLabel" Text="R$ 0,00" TextColor="White" FontSize="32" FontFamily="OpenSansSemibold" />
+                    <Label x:Name="ResumoLabel" TextColor="{StaticResource Secondary}" FontSize="13" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="Acesso rápido" Style="{StaticResource TituloSecao}" />
+
+            
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="16" RowSpacing="16">
+
+                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource CardBorder}">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCardTapped" CommandParameter="despesas" />
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Despesas" Style="{StaticResource CardTitulo}" />
+                        <Label Text="Ver gastos do mês" Style="{StaticResource CardSubtitulo}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource CardBorder}">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCardTapped" CommandParameter="receitas" />
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Receitas" Style="{StaticResource CardTitulo}" />
+                        <Label Text="Ver entradas do mês" Style="{StaticResource CardSubtitulo}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource CardBorder}">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCardTapped" CommandParameter="resumo" />
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Resumo" Style="{StaticResource CardTitulo}" />
+                        <Label Text="Página com abas" Style="{StaticResource CardSubtitulo}" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource CardBorder}">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCardTapped" CommandParameter="dicas" />
+                    </Border.GestureRecognizers>
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Dicas" Style="{StaticResource CardTitulo}" />
+                        <Label Text="Economize mais" Style="{StaticResource CardSubtitulo}" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

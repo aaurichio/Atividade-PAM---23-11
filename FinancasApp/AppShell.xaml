@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FinancasApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:FinancasApp.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"
+    Title="Minhas Finanças">
+
+    <!-- Cabeçalho do menu lateral -->
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="{StaticResource Primary}" HeightRequest="140" Padding="20">
+            <VerticalStackLayout VerticalOptions="End" Spacing="2">
+                <Label Text="💰" FontSize="40" />
+                <Label Text="Minhas Finanças" FontSize="20" FontFamily="OpenSansSemibold" TextColor="White" />
+                <Label Text="Controle simples do seu dinheiro" FontSize="12" TextColor="{StaticResource Secondary}" />
+            </VerticalStackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <!-- 1º item do menu lateral: contém as ABAS DE RODAPÉ (cada <Tab> com ícone) -->
+    <FlyoutItem Title="Início" Route="inicio">
+        <FlyoutItem.Icon>
+            <FontImageSource Glyph="🏠" Size="24" />
+        </FlyoutItem.Icon>
+
+        <Tab Title="Home" Route="home">
+            <Tab.Icon>
+                <FontImageSource Glyph="🏠" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+        </Tab>
+
+        <Tab Title="Transações" Route="transacoes">
+            <Tab.Icon>
+                <FontImageSource Glyph="💳" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:TransacoesPage}" />
+        </Tab>
+
+        <Tab Title="Metas" Route="metas">
+            <Tab.Icon>
+                <FontImageSource Glyph="🎯" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:MetasPage}" />
+        </Tab>
+
+        <Tab Title="Perfil" Route="perfil">
+            <Tab.Icon>
+                <FontImageSource Glyph="👤" Size="24" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:PerfilPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <!-- Demais itens do menu lateral (só para simbolizar a transição entre páginas) -->
+    <FlyoutItem Title="Relatórios" Route="relatorios">
+        <FlyoutItem.Icon>
+            <FontImageSource Glyph="📊" Size="24" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate views:RelatoriosPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Configurações" Route="configuracoes">
+        <FlyoutItem.Icon>
+            <FontImageSource Glyph="⚙️" Size="24" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate views:ConfiguracoesPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Sobre" Route="sobre">
+        <FlyoutItem.Icon>
+            <FontImageSource Glyph="ℹ️" Size="24" />
+        </FlyoutItem.Icon>
+        <ShellContent ContentTemplate="{DataTemplate views:SobrePage}" />
+    </FlyoutItem>
+</Shell>
